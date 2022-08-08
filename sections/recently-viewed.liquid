@@ -37,6 +37,16 @@ Calls to this snippet need to quantify the {% endcomment %}
   .recent-view-section .grid {
     padding: 0 10px;
   }
+
+  /* Adjust position to allow for Rapid Reviews app above Recently Viewed - am */
+  .recent-view-section {
+    transform: translateY(-70px);
+  }
+  @media screen and (max-width: 768px) {
+    .recent-view-section {
+      transform: translateY(-35px);
+    }
+  }
 {% endstyle %}
 
 {% schema %}
