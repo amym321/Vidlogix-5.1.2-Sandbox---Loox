@@ -130,15 +130,21 @@
 
                     {% comment %} removed and added code change per 4.1.1 customization {% endcomment %}
 
-                    {% if isModal %}
-                      <div class="product-single__review-link">
-                        {%- liquid render 'junip-product-summary', product: product -%}
-                      </div>
-                    {% else %}
-                      <div class="product-single__review-link animate-scroll">
-                        {%- liquid render 'junip-product-summary', product: product -%}
-                      </div>
-                    {% endif %}   
+                    {% comment %}add Rapid Reviews- am{% endcomment %}
+                    <div class="product-single__review-link">
+                      <div class="rapid_reviews_stars_badge"></div>
+                    </div>
+                    {% comment %}
+                      {% if isModal %}
+                        <div class="product-single__review-link">
+                          {%- liquid render 'junip-product-summary', product: product -%}
+                        </div>
+                      {% else %}
+                        <div class="product-single__review-link animate-scroll">
+                          {%- liquid render 'junip-product-summary', product: product -%}
+                        </div>
+                      {% endif %}  
+                    {% endcomment %}
 
              
                   {% comment %} end code change per 4.1.1 customization {% endcomment %}
@@ -280,15 +286,21 @@
 
                         {%- if settings.enable_product_reviews -%}
 
-                          {% if isModal %}
-                            <div class="product-single__review-link">
-                              {%- liquid render 'junip-product-summary', product: product -%}
-                            </div>
-                          {% else %}
-                            <div class="product-single__review-link animate-scroll">
-                              {%- liquid render 'junip-product-summary', product: product -%}
-                            </div>
-                          {% endif %}
+                          {% comment %}add Rapid Reviews- am{% endcomment %}
+                          <div class="product-single__review-link">
+                            <div class="rapid_reviews_stars_badge"></div>
+                          </div>
+                          {% comment %}
+                            {% if isModal %}
+                              <div class="product-single__review-link">
+                                {%- liquid render 'junip-product-summary', product: product -%}
+                              </div>
+                            {% else %}
+                              <div class="product-single__review-link animate-scroll">
+                                {%- liquid render 'junip-product-summary', product: product -%}
+                              </div>
+                            {% endif %}
+                          {% endcomment %}
         
                         {%- endif -%}
 
@@ -659,16 +671,15 @@
           {% endunless %}
 
           <!-- REVIEWS ACCORDION -->
-          {% if settings.enable_product_reviews %}
-            <div class="accordion closed" id="reviews"><span class="accordion-title">Reviews</span>
-              <div class="accordion-review-stars">{%- liquid render 'junip-product-summary', product: product -%}</div>
-              <span class="icon"></span></div>
-            <div class="container">
-              <div class="content">
-                {% liquid render 'junip-product-review', product: product %}
-              </div>
-            </div>
-          {% endif %}
+            {% comment %}remove junip. Rapid Reviews is at bottom. this is just the accordion header - am{% endcomment %}
+            {% if settings.enable_product_reviews %}
+              <div class="accordion-review closed" id="reviews"><span class="accordion-title">Reviews</span>
+                <div class="accordion-review-stars">
+                  {%- liquid render 'junip-product-summary', product: product -%}</div>
+                  <span class="icon"></span>
+                </div>
+            {% endif %}
+          
 
            <!-- RECOMMENDED PRODUCTS ACCORDION -->
           <!-- *** REMOVE RECOMMENDED ACCORDION - FREQUENTLY BOUGHT TOGETHER REPLACES IT - am *** -->
@@ -794,3 +805,5 @@
     </div>
   </div>
 </div>
+
+{% render 'rapid-reviews-product-detail-extras' %}
