@@ -94,11 +94,31 @@
           "enable_color_swatches": false,
           "enable_sort": true
         }
+      },
+      "1659638659b738f595": {
+        "type": "apps",
+        "blocks": {
+          "37dcc523-13a7-434b-a46e-fd63bfb7d1d2": {
+            "type": "shopify:\/\/apps\/rapid-reviews\/blocks\/stars-color\/7a3f281c-98ec-4a98-8b29-ee3200debcb5",
+            "settings": {
+              "active": true,
+              "top_color_predefined": "gold_bright"
+            }
+          }
+        },
+        "block_order": [
+          "37dcc523-13a7-434b-a46e-fd63bfb7d1d2"
+        ],
+        "settings": {
+          "full_width": false,
+          "space_around": true
+        }
       }
     },
     "order": [
       "collection-header",
       "promo-grid",
-      "main-collection"
+      "main-collection",
+      "1659638659b738f595"
     ]
   }

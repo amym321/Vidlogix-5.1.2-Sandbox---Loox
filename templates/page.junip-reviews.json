@@ -35,11 +35,31 @@
           "showSummary": true,
           "reviewsCount": 10
         }
+      },
+      "16596440768adff3c5": {
+        "type": "apps",
+        "blocks": {
+          "cd6f72d7-2434-4ebc-b004-cd49993b9645": {
+            "type": "shopify:\/\/apps\/rapid-reviews\/blocks\/stars-color\/7a3f281c-98ec-4a98-8b29-ee3200debcb5",
+            "settings": {
+              "active": true,
+              "top_color_predefined": "gold_bright"
+            }
+          }
+        },
+        "block_order": [
+          "cd6f72d7-2434-4ebc-b004-cd49993b9645"
+        ],
+        "settings": {
+          "full_width": false,
+          "space_around": true
+        }
       }
     },
     "order": [
       "1640645760e31b6977",
       "1640645763b54fb3c3",
-      "junip-reviews"
+      "junip-reviews",
+      "16596440768adff3c5"
     ]
   }
