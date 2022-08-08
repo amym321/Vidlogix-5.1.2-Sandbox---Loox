@@ -151,7 +151,12 @@
         {%- endif -%}
         
         {%- if settings.enable_product_reviews -%}
-          {%- liquid render 'junip-product-summary', product: product -%}
+        {% comment %}add Rapid Reviews, remove Junip - am{% endcomment %}
+          {%- render 'rapid-reviews-collection-badge', product: product -%}
+
+          {% comment %}
+            {%- liquid render 'junip-product-summary', product: product -%}
+          {% endcomment %}
         {%- endif -%}
 
         <div class="grid-product__price">
