@@ -131,7 +131,7 @@
                     {% comment %} removed and added code change per 4.1.1 customization {% endcomment %}
 
                     {% comment %}add Rapid Reviews- am{% endcomment %}
-                    <div class="product-single__review-link">
+                    <div class="product-single__review-link animate-scroll">
                       <div class="rapid_reviews_stars_badge"></div>
                     </div>
                     {% comment %}
@@ -287,7 +287,7 @@
                         {%- if settings.enable_product_reviews -%}
 
                           {% comment %}add Rapid Reviews- am{% endcomment %}
-                          <div class="product-single__review-link">
+                          <div class="product-single__review-link animate-scroll">
                             <div class="rapid_reviews_stars_badge"></div>
                           </div>
                           {% comment %}
@@ -673,7 +673,7 @@
           <!-- REVIEWS ACCORDION -->
             {% comment %}remove junip. Rapid Reviews is at bottom. this is just the accordion header - am{% endcomment %}
             {% if settings.enable_product_reviews %}
-              <div class="accordion-review closed" id="reviews"><span class="accordion-title">Reviews</span>
+              <div class="accordion accordion-review closed" id="reviews"><span class="accordion-title">Reviews</span>
                 <div class="accordion-review-stars">
                   {%- liquid render 'junip-product-summary', product: product -%}</div>
                   <span class="icon"></span>
