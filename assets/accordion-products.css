@@ -74,7 +74,7 @@
     }
   }
   
-  .accordion {
+  .accordion, .accordion-review {
     margin: 0;
     padding: 30px 10px;
     border-top: #eee 1px solid;
@@ -86,7 +86,8 @@
     position:relative;
   }
   
-  .accordion:hover {
+  .accordion:hover,
+  .accordion-review:hover {
     cursor: pointer;
   }
   
@@ -103,11 +104,13 @@
     padding:10px;
   }
   
-  .accordion.opened span.icon {
+  .accordion.opened span.icon,
+  .accordion-review.opened span.icon {
     background:url('//cdn.shopify.com/s/files/1/0056/9632/3651/t/180/assets/minus.svg?v=8132233198337540085') center center no-repeat;
   }
   
-  .accordion span.icon {
+  .accordion span.icon,
+  .accordion-review span.icon {
     display:block;
     position:absolute;
     right:3px;
@@ -133,7 +136,8 @@
     color: #949494;
   }
   
-  .template-product .accordion-section .container {
+  .template-product .accordion-section .container,
+  .rapid_reviews_items    {
     padding:0;
     margin:0;
     display: none;
@@ -141,7 +145,8 @@
     padding:5px 0;
   }
   
-  .template-product .accordion-section .accordion.opened-default + .container {
+  .template-product .accordion-section .accordion.opened-default + .container,
+  .template-product .accordion-section .accordion-review.opened-default ~ .rapid_reviews_items {
     display: block;
   }
   
@@ -345,7 +350,8 @@
   
   /*========= Reviews Section ===========*/
   
-  .template-product .accordion .accordion-review-stars {
+  .template-product .accordion .accordion-review-stars,
+  .template-product .accordion-review .accordion-review-stars {
     position: absolute;
     top: 54%;
     transform: translateY(-50%);
@@ -373,12 +379,14 @@
     max-width: 100%;
   }
   
-  .accordion .junip-product-summary-review-count {
+  .accordion .junip-product-summary-review-count,
+  .accordion-review .junip-product-summary-review-count {
     font-size: 16px;
     font-weight: normal;
   }
   
-  .accordion .junip-product-review-title {
+  .accordion .junip-product-review-title,
+  .accordion-review .junip-product-review-title {
     display: none;
   }
   
@@ -393,7 +401,7 @@
     .accordion-section {
       margin-top: 80px;
     }
-    .accordion {
+    .accordion, .accordion-review {
       font-size: 24px;
     }
     ul.tabs {
@@ -404,7 +412,8 @@
       font-size: 15px;
     }
   
-    .template-product .accordion .accordion-review-stars {
+    .template-product .accordion .accordion-review-stars,
+    .template-product .accordion-review .accordion-review-stars {
       top: 52%;
       left: 130px;
     }
