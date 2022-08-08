@@ -1,0 +1,24 @@
+<style>
+    .rapid_reviews_items, .rapid_reviews_media {
+      max-width: 1000px;
+    }
+    .product-recommendations .rapid_reviews_stars_badge {
+      text-align: center;
+    }
+    .product-recommendations .rapid_reviews_stars_badge a {
+      border-bottom: none !important;
+    }
+  </style>
+  
+  <script>
+    function checkForRecommendations () {
+      var times = 20
+      var check = function () {
+        var hasRecommendations = document.querySelector('.product-recommendations')
+        if (!hasRecommendations && --times) return setTimeout(check, 40)
+        if (hasRecommendations) window.rr_drawStarsBadge()
+      }
+      check()
+    }
+    checkForRecommendations()
+  </script>
