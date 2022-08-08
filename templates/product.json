@@ -142,21 +142,18 @@
       "blocks": {
         "1e4f3eac-b324-47e9-bef3-5c3f54aac34e": {
           "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-product-review\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
         },
         "a5ee3dbc-e450-4bb5-8672-2dde0638a1ba": {
           "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-product-summary\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
         },
         "0c547bcd-0956-4f89-8c0f-49720a677b46": {
           "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-reviews\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "disabled": true,
           "settings": {
             "layout": "list",
             "reviewsType": "all",
