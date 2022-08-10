@@ -25,6 +25,10 @@
   {%- endstyle -%}
 {%- endif -%}
 
+{% if template.name == 'index' %}
+  {% render 'rapid-reviews-core-script' %}
+{% endif %}
+
 <footer class="site-footer" data-section-id="{{ section.id }}" data-section-type="footer-section">
   <div class="page-width">
 
