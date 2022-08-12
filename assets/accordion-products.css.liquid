@@ -528,3 +528,34 @@ position: absolute;
 z-index: -1;
 background-image: linear-gradient(90deg,rgba(247,243,238,0) 0, #f8f6f78f, #F8F6F7);
 }
+
+/* Rapid Reviews summary on PDP accordion tab */
+.reviews-accordion {
+  font-size:16px; 
+  font-weight:400; 
+  padding-left:10px;
+  position:absolute;
+  transform: translateY(5px);
+}
+
+.reviews-accordion-title {
+  display:inline !important;
+  padding-right: 0 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .reviews-accordion {
+    /* padding-left:0; */
+    position:absolute;
+    transform: translateY(2px);
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .reviews-accordion-title {
+    display:block !important;
+  }
+  .reviews-accordion {
+    padding-left: 0;
+  }
+}

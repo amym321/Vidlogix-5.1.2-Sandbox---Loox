@@ -671,12 +671,13 @@
           {% endunless %}
 
           <!-- REVIEWS ACCORDION -->
-            {% comment %}remove junip. Rapid Reviews is at bottom. this is just the accordion header - am{% endcomment %}
+            cremove junip. Rapid Reviews is at bottom. this is just the accordion header - am{% endcomment %}
             {% if settings.enable_product_reviews %}
-              <div class="accordion accordion-review closed" id="reviews"><span class="accordion-title">Reviews & Q/A</span>
-                <div class="accordion-review-stars">
-                  {%- liquid render 'junip-product-summary', product: product -%}</div>
-                  <span class="icon"></span>
+              <div class="accordion accordion-review closed" id="reviews">
+                <span class="accordion-title reviews-accordion-title">Reviews & Q/A</span>
+                <span class="rapid_reviews_stars_badge reviews-accordion"></span>
+                {% comment %}<div class="accordion-review-stars">{%- liquid render 'junip-product-summary', product: product -%}</div>{% endcomment %}
+                <span class="icon"></span>
                 </div>
             {% endif %}
           
