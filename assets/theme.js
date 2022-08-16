@@ -6278,7 +6278,7 @@ lazySizesConfig.expFactor = 4;
           delete this.queryParams.page;
         }
   
-        window.location.search = new URLSearchParams(Object.entries(this.queryParams));
+        window.location.search = decodeURIComponent(new URLSearchParams(Object.entries(this.queryParams)));
       },
   
       colorSwatchHovering: function() {
