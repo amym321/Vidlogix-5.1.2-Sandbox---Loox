@@ -169,35 +169,6 @@
     "1637459177d4db9b86": {
       "type": "apps",
       "disabled": true,
-      "blocks": {
-        "1e4f3eac-b324-47e9-bef3-5c3f54aac34e": {
-          "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-product-review\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
-        "a5ee3dbc-e450-4bb5-8672-2dde0638a1ba": {
-          "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-product-summary\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "settings": {
-            "product": "{{product}}"
-          }
-        },
-        "0c547bcd-0956-4f89-8c0f-49720a677b46": {
-          "type": "shopify:\/\/apps\/junip-product-reviews-ugc\/blocks\/junip-reviews\/dc14f5a8-ed15-41b1-ad08-cfba23f9789b",
-          "settings": {
-            "layout": "list",
-            "reviewsType": "all",
-            "showSummary": true,
-            "reviewsCount": 10,
-            "containerClass": ""
-          }
-        }
-      },
-      "block_order": [
-        "1e4f3eac-b324-47e9-bef3-5c3f54aac34e",
-        "a5ee3dbc-e450-4bb5-8672-2dde0638a1ba",
-        "0c547bcd-0956-4f89-8c0f-49720a677b46"
-      ],
       "settings": {
         "full_width": false,
         "space_around": true
@@ -213,7 +184,7 @@
         "title": "Real people, real advice.",
         "center_title": false,
         "text_below": false,
-        "text": "<p>You have questions, we have answers. Whether you’re looking for a gift or searching for a smart home solution, our team of trusted specialists are here to provide exactly the guidance you need.<\/p><p><\/p>",
+        "text": "<p>We hire and extensively train our product specialists so that each one can speak from a place of confidence and expertise... which means when you need answers, we're ready with solutions tailored to you.<\/p><p><\/p>",
         "button_label": "Get Help",
         "button_link": "shopify:\/\/pages\/contact",
         "button_style": "primary",
