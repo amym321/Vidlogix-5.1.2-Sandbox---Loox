@@ -7916,9 +7916,10 @@ lazySizesConfig.expFactor = 4;
   
     RecentlyViewed.prototype = Object.assign({}, RecentlyViewed.prototype, {
       init: function() {
-        if (init) {
-          return;
-        }
+        // removed the return since this should run more than 1x on PDP with popup and section - am
+        // if (init) {
+        //   return;
+        // }
   
         init = true;
   
