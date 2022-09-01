@@ -96,12 +96,21 @@
                 <a class="h2 product-single__title" href="{{ product.url }}">{{ product.title }}</a>
                 {% comment %} end code change per 4.1.1 customization {% endcomment %}
               {%- else -%}
-                {% comment %} display values above title on desktop. 4.1.1 mod {% endcomment %}
-                <div class="product-single__values mobile-hidden">
-                  {% if section.settings.value_one != '' %}<span>{{ section.settings.value_one }}</span>{% endif %}
-                  {% if section.settings.value_two != '' %}<span>{{ section.settings.value_two }}</span>{% endif %}
+                {% comment %} display values above title on desktop. 4.1.1 mod (modified with Beacon) {% endcomment %}
+                {% comment %} Beacon Help Scout popups - am {% endcomment %}
+                <div class="product-single__values">
+                  {% if section.settings.value_one != '' %}
+                    <span id="product-value-one" class="values-span" style="">
+                      <a href="#" data-beacon-article-modal="630fcf254cde766bbe140fbe">{{ section.settings.value_one }}</a>
+                    </span>
+                  {% endif %}
+                  {% if section.settings.value_two != '' %}
+                    <span id="product-value-two" class="values-span">
+                      <a href="#" data-beacon-article-modal="630fb93890c29a3d732c39e6">{{ section.settings.value_two }}</a>
+                    </span>
+                  {% endif %}
                 </div>
-                 {% comment %} end code change per 4.1.1 customization {% endcomment %}
+                {% comment %} end code change per 4.1.1 customization (modified with Beacon) {% endcomment %}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
                     {{-product.title-}}

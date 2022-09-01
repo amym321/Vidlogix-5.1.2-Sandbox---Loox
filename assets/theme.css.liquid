@@ -13033,3 +13033,29 @@ button#dummy-chat-button.chat-toggle {
 .modal {
   z-index: 26000 ;
 }
+
+/* add open popup files icon */
+.product-single__values span a::after
+{
+  background-image: url('//cdn.shopify.com/s/files/1/0056/9632/3651/files/open_new_page_7.png?v=1653226737');
+  background-size: 18px 18px;
+  margin-left: 7px;
+  display: inline-block;
+  width: 18px; 
+  height: 18px;
+  transform: translateY(4px);
+  content:"";
+}
+
+/* product values above PDP title */
+.product-single__values span {
+  position: relative;
+  overflow: hidden;
+  transition: background .2s ease 0s;
+}
+
+.product-single__values span:hover  {
+  cursor: pointer;
+  background: #f8f8f8;
+  /* transition-delay: .25s; */
+}
