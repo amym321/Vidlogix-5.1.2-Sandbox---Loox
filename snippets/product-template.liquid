@@ -110,7 +110,7 @@
                     </span>
                   {% endif %}
                 </div>
-                {% comment %} end code change per 4.1.1 customization (modified with Beacon) {% endcomment %}
+                 {% comment %} end code change per 4.1.1 customization (modified with Beacon) {% endcomment %}
                 <h1 class="h2 product-single__title">
                   {%- unless product.empty? -%}
                     {{-product.title-}}
@@ -295,10 +295,17 @@
 
                         {%- if settings.enable_product_reviews -%}
 
-                          {% comment %}add Rapid Reviews- am{% endcomment %}
+                          {% comment %} add Loox Reviews- am{% endcomment %}
                           <div class="product-single__review-link animate-scroll">
-                            <div class="rapid_reviews_stars_badge"></div>
+                            <a href="#looxReviews">
+                              <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
+                            </a>
                           </div>
+                          {% comment %}remove Rapid Reviews- am{% endcomment %}{% comment %}
+                              <div class="product-single__review-link animate-scroll">
+                                <div class="rapid_reviews_stars_badge"></div>
+                              </div>
+                          {% endcomment %}
                           {% comment %}remove Junip Reviews- am{% endcomment %}{% comment %} 
                             {% if isModal %}
                               <div class="product-single__review-link">
@@ -681,17 +688,27 @@
 
           <!-- REVIEWS ACCORDION -->
             {% comment %}remove junip. Rapid Reviews is at bottom. this is just the accordion header - am{% endcomment %}
-            {% if settings.enable_product_reviews %}
-              <div class="accordion accordion-review closed" id="reviews">
-                <span class="accordion-title reviews-accordion-title">Reviews & Q/A</span>
-                <div class="reviews-accordion reviews-accordion-title">
-                  {% render 'rapid-reviews-collection-badge' %}
+            {% comment %}
+              {% if settings.enable_product_reviews %}
+                <div class="accordion accordion-review closed" id="reviews">
+                  <span class="accordion-title reviews-accordion-title">Reviews & Q/A</span>
+                      <div class="reviews-accordion reviews-accordion-title">
+                        {% render 'rapid-reviews-collection-badge' %}
+                      </div>
+                  {% comment %}<div class="accordion-review-stars">{%- liquid render 'junip-product-summary', product: product -%}</div>{% endcomment %}
+                  <span class="icon"></span>
                 </div>
-                {% comment %}<div class="accordion-review-stars">{%- liquid render 'junip-product-summary', product: product -%}</div>{% endcomment %}
-                <span class="icon"></span>
-                </div>
-            {% endif %}
+              {% endif %}
+            {% endcomment %}
           
+            {% comment %}LOOX Reviews added - am {% endcomment %}
+            <div class="accordion accordion-review">
+              <span class="accordion-title reviews-accordion-title">Reviews</span>
+            </div>
+            <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default add-title">
+              {{ product.metafields.loox.reviews }}
+            </div><br><br>
+
 
            <!-- RECOMMENDED PRODUCTS ACCORDION -->
           <!-- *** REMOVE RECOMMENDED ACCORDION - FREQUENTLY BOUGHT TOGETHER REPLACES IT - am *** -->
@@ -818,4 +835,6 @@
   </div>
 </div>
 
-{% render 'rapid-reviews-product-detail-extras' %}
+    {% comment %}remove Rapid Reviews - am {% endcomment %}{% comment %}
+      {% render 'rapid-reviews-product-detail-extras' %}
+    {% endcomment %}
