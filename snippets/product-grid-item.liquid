@@ -151,12 +151,7 @@
         {%- endif -%}
         
         {%- if settings.enable_product_reviews -%}
-        {% comment %}add Rapid Reviews, remove Junip - am{% endcomment %}
-          {%- render 'rapid-reviews-collection-badge', product: product -%}
-
-          {% comment %}
-            {%- liquid render 'junip-product-summary', product: product -%}
-          {% endcomment %}
+          <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
         {%- endif -%}
 
         <div class="grid-product__price">
