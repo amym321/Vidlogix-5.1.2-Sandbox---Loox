@@ -297,7 +297,7 @@
 
                           {% comment %} add Loox Reviews- am{% endcomment %}
                           <div class="product-single__review-link animate-scroll">
-                            <a href="#looxReviews">
+                            <a href="#reviews">
                               <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}"></div>
                             </a>
                           </div>
@@ -702,7 +702,7 @@
             {% endcomment %}
           
             {% comment %}LOOX Reviews added - am {% endcomment %}
-            <div class="accordion accordion-review">
+            <div class="accordion accordion-review" id="reviews">
               <span class="accordion-title reviews-accordion-title">Reviews</span>
             </div>
             <div id="looxReviews" data-product-id="{{product.id}}" class="loox-reviews-default add-title">
