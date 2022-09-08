@@ -12,7 +12,6 @@
          .slideToggle(); //use slideToggle to show or hide it
      });
 
-    //Remove Rapid Reviews code
     //Hides and Shows Rapid Review accordion content
     // $('.accordion-section').on('click', '.accordion-review', function(e){
     //   e.preventDefault(); //prevent default action of a button
@@ -21,6 +20,16 @@
     //     .not(':animated') //if it is not currently animating
     //     .slideToggle(); //use slideToggle to show or hide it
     // });
+
+    //Hides and Shows Loox accordion content
+    $('.accordion-section').on('click', '.accordion-review', function(e){
+      e.preventDefault(); //prevent default action of a button
+      $(this) //get the element the user clicked on
+        //$( "#shopify-block-loox-product-reviews" )  //select the Loox app block
+        $( "#looxReviews" )  //select the Loox app block
+        .not(':animated') //if it is not currently animating
+        .slideToggle(); //use slideToggle to show or hide it
+    });
  
     //Makes tabs active
      $('ul.tabs').each(function(){
