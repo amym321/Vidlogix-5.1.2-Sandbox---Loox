@@ -41,11 +41,12 @@ Calls to this snippet need to quantify the {% endcomment %}
   /* Adjust position to allow for Rapid Reviews app above Recently Viewed - am */
   .recent-view-section {
     /*transform: translateY(-70px);*/
-    transform: translateY(-60px);   /* changed for when no reviews in Loox */
+    transform: translateY(-30px);   /* changed for Loox reviews */
   }
   @media screen and (max-width: 768px) {
     .recent-view-section {
-      transform: translateY(-35px);
+      /*transform: translateY(-35px);*/
+      transform: translateY(-30px);   /* changed for Loox reviews */
     }
   }
 {% endstyle %}
